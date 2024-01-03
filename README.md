@@ -22,6 +22,6 @@ The following setup only works for Linux/MacOS.
 
 - Create a venv environment `python3.9 -m venv venv`
 
-- Activate the environment. Once you are in the environment,  it should show (venv) in front of the prompt.** Make sure to activate the environment whenever you are writing the code.** `source venv/bin/activate`
+- Activate the environment. Once you are in the environment,  it should show (venv) in front of the prompt.**Make sure to activate the environment whenever you are writing the code.** `source venv/bin/activate`
 
 - Install packages using pip. Make sure to download the requirements.txt first. `pip install -r requirements.txt`
