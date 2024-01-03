@@ -1,7 +1,7 @@
 # Git and GitHub Tutorial
 This tutorial covers basic Git and GitHub operations that are useful for contributing to our project. Follow these steps to make your contributions smoothly.
 
-**Important: Do NOT commit directly to the main branch to avoid conflicts. Please always follow the following procedure to push your changes to this repository**
+**Important: Avoid committing directly to the main branch to avoid conflicts. Please follow the following procedure to push your changes to this repository.** 
 
 ## Cloning the project
 To start working on the project, you first need to clone the repository to your local machine. Use the following command:
@@ -48,7 +48,7 @@ Go to the GitHub page for our repository, and you'll see an option to create a '
 
 ## Approving the pull request
 
-Ask the other member of your team to approve your pull request.
+Ask the other member of your team to approve your pull request (or approve it yourself).
 
 ## Delete the branch from GitHub
 
