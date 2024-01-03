@@ -20,7 +20,7 @@ The following setup only works for Linux/MacOS.
 
 - Install venv `sudo apt-get install python3.9-venv`
 
-- Create a venv environment `python3.9 -m venv venv`
+- Create a venv environment `python3.9 -m venv venv` If you name your venv folder in a different way, please add the folder name to the `.gitignore` file.
 
 - Activate the environment. Once you are in the environment,  it should show (venv) in front of the prompt.**Make sure to activate the environment whenever you are writing the code.** `source venv/bin/activate`
 
