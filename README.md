@@ -18,7 +18,7 @@ The following setup only works for Linux/MacOS.
 
 - Install Python 3.9.5 `sudo apt install python3.9`
 
-- Install venv `sudo apt-get install python3.9-venv'
+- Install venv `sudo apt-get install python3.9-venv`
 
 - Create a venv environment `python3.9 -m venv venv`
 
