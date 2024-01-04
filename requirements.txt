@@ -21,3 +21,8 @@ threadpoolctl==3.2.0
 tqdm==4.66.1
 tzdata==2023.4
 zipp==3.17.0
+torch>=1.4.0
+torchvision>=0.5.0
+dominate>=2.4.0
+visdom>=0.1.8.8
+wandb
