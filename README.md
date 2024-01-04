@@ -16,11 +16,11 @@ We will develop the project using Python 3.9.5. Refer to requirements.txt for pa
 
 The following setup only works for Linux/MacOS.
 
-- Install Python 3.9.5 `sudo apt install python3.9`
+- Install Python 3.9.5: `sudo apt install python3.9`
 
-- Install venv `sudo apt-get install python3.9-venv`
+- Install venv: `sudo apt-get install python3.9-venv`
 
-- Create a venv environment `python3.9 -m venv venv` If you name your venv folder in a different way, please add the folder name to the `.gitignore` file.
+- Create a venv environment: `python3.9 -m venv venv` If you name your venv folder in a different way, please add the folder name to the `.gitignore` file.
 
 - Activate the environment. Once you are in the environment,  it should show (venv) in front of the prompt.**Make sure to activate the environment whenever you are writing the code.** `source venv/bin/activate`
 
