@@ -6,7 +6,7 @@ This project aims to analyze crime information in Tallahasse, FL, collected from
 
 This project contains two parts:
 
-- Traditional data analysis on TOPS data using Geopdandas and Scikit-learn
+- Traditional data analysis on TOPS data using Geopandas and Scikit-learn
 - Crime heatmap prediction given a geographical map, following [He, Zheng (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0952197621003080)
 
 ## Dependencies
