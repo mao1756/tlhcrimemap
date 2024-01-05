@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # Venv
 venv/
+
+#Mac OSX
+.DS_Store
