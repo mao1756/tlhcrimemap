@@ -403,3 +403,6 @@ venv_tlhcrimemap/
 
 #Mac OSX
 .DS_Store
+
+#Jupyter
+.ipynb_checkpoints
