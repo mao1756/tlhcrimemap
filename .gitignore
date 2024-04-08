@@ -421,3 +421,5 @@ venv_tlhcrimemap/
 **/*.cb2
 **/*.lb
 **/*.synctex.gz
+**/*.snm
+**/*.nav
