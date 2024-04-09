@@ -3,7 +3,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
 
-\title{Proposal for Modeling Approach}
+\title{A proposal to model crime heat maps of Tallahassee, FL, using Pix2Pix}
 \author{Munawar Ali, Çağatay Ayhan, Ece Karaçam, Abdullah Malik, and Mao Nishino}
 \date{\today}
 
@@ -11,12 +11,12 @@
 
 \maketitle
 
-\section{Preliminary}
-In this section, we will discuss the pix2pix model, which is a type of Generative Adversarial Network (GAN) used for image-to-image translation tasks. The pix2pix model works by training on pairs of images (input and output) and learning to generate the output image from the input image. In our use case, we will use the pix2pix model to generate a crime heatmap given a geographical map. This approach will allow us to even generate hypothetical crime heatmaps based on future urban planning designs.
+\section{Introduction}
+In this report, we discuss the pix2pix model. This model is a type of Generative Adversarial Network (GAN) used for image-to-image translation tasks, where there are two networks competing against each other. This is accomplished by training on pairs of images (input and output) and learning to differentiate the output image from the input image. The training stops once one of the networks is unable to differentiate between randomly generated image against a genuine sample. In our use case, we will use the pix2pix model to generate a crime heatmap given a geographical map, and have an adverserial network learn to differentiate genuine heatmaps from random noise. This approach will allow us to even evaluate hypothetical proposed urban designs for their predicted crime heatmaps. The hope is that this would allow developers the tools to ensure that crime prediction is taken into account while designing parts of Tallahassee, FL.
 
 \section{Methodology}
 \subsection{Collection of geographical maps}
-We will collect geographical maps of Tallahassee, FL, which will serve as the input to our pix2pix model. These maps will include information such as roads, buildings, parks, and other geographical features. We will use \verb|osmnx|, a Python library, to download OpenStreetMap data for the area and use \verb|matplotlib| to visualize the maps. In particular, we first plot the entire map of Tallahassee as a 16384x16384 image, and then we divide it into 256x256 patches to train the pix2pix model.
+We will collect geographical maps of Tallahassee, FL, which will serve as the input to our pix2pix model. These maps will include information such as roads, buildings, parks, and other geographical features. We will use \verb|osmnx|, a Python library, to download OpenStreetMap data for the area and use \verb|matplotlib| to visualize the maps. To accomplish this, we first plot the entire map of Tallahassee as a 16384x16384 image, and then we divide it into 256x256 patches to train the pix2pix model.
 \subsection{Collection of crime data}
 We will collect crime data from the Tallahassee Police Statistics, which includes information such as the time and date of the crime, the location of the crime, the type of the report, and the geographical coordinates of the crime. We will then plot the crime data, by using the \verb|scatter| feature in \verb|matplotlib|, on the 16384x16384 geographical map from the previous section, but with all components made invisible. This allows us to align the crime data with the geographical map of Tallahassee to create the output images for the pix2pix model. Similar to the geographical maps, we will divide the crime heatmap into 256x256 patches.
 \subsection{Training the pix2pix model}
