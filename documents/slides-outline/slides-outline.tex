@@ -1,5 +1,6 @@
 \documentclass{beamer}
 
+
 \title{Tallahassee Crime Map}
 \author{Munawar Ali, Çağatay Ayhan, Ece Karaçam, Abdullah Malik, and Mao Nishino}
 
@@ -15,6 +16,9 @@
     \frametitle{Outline}
     \tableofcontents
 \end{frame}
+
+%%% Keep the hourly bar-chart
+%% add the location bar-chart
 
 \section{Introduction}
 \begin{frame}
@@ -33,16 +37,160 @@
     Write a short description about how we create our map dataset
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%% SPATIAL ANALYSIS BEGIN %%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \frametitle{Categorical Analysis}
+    \begin{minipage}[c]{0.65\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{Figures/Number of Incidents Per Crime-Report Type.png}
+            \caption{A bar chart for each type of crime report.}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.3\textwidth}
+        {\scriptsize % Smaller text to fit more content
+        \begin{itemize}
+            \item The values on the $x$-axis correspond to the log of the actual count for visual purposes.
+            \item On the $y$-axis all different types of crime reports are listed.
+            \item There are 67 types of reports.
+            \item We will filter out some from our analysis. For example, community policing occurs most often and it is not of interest for our purposes.
+        \end{itemize}
+        }
+    \end{minipage}
+\end{frame}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% SPATIAL ANALYSIS END %%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% TEMPORAL ANALYSIS BEGIN%%%%%%%%%%%%%%%%%
 \section{Experimental Data Analysis}
 \begin{frame}
     \frametitle{Temporal Analysis}
-    Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
+    % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
+    \begin{minipage}[c]{0.7\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{Figures/Number of Incidents Per Month.png}
+            \caption{Crime Distribution Per Month}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.3\textwidth}
+        {\scriptsize % Smaller text to fit more content
+        \begin{itemize}
+            \item Average \# of reported crimes per month is $7311$.
+            \item Data includes all of 2023 and the first month of 2024.
+        \end{itemize}
+        }
+    \end{minipage}
+
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Temporal Analysis Page 2 %%%%%%
 \begin{frame}
-    \frametitle{Spatial Analysis}
-    Put the figure about locations where crimes are frequent
+    \frametitle{Temporal Analysis}
+    % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
+    \begin{minipage}[c]{0.7\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{Figures/Crime Distribution Per Hour (All Dataset).png}
+            \caption{Crime Distribution Per Hour -- All 2023}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.3\textwidth}
+        {\scriptsize % Smaller text to fit more content
+        \begin{itemize}
+            \item Hourly analysis of the data reveals a fluctuating trend with peak hours.
+            \item Data includes all of 2023.
+        \end{itemize}
+        }
+    \end{minipage}
+
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Temporal Analysis Page 3 %%%%%%
+
+\begin{frame}
+    \frametitle{Temporal Analysis}
+    % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
+        \begin{figure}
+            \flushleft
+            \includegraphics[width=1\linewidth]{Figures/OccurencesPerSeason.001.jpeg}
+        \end{figure}
+        {\scriptsize % Smaller text to fit more content
+        \begin{itemize}
+            \item  Hourly crime distribution using portions of the data.
+            \item  Same trend across different seasons of the year 2023.
+        \end{itemize}
+        }
+    
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Temporal Analysis Page 4 %%%%%%
+
+\begin{frame}
+    \frametitle{Temporal Analysis}
+    % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
+        \begin{figure}
+            \flushleft
+            \includegraphics[width=1\linewidth]{Figures/Daylight_and_Night.png}
+        \end{figure}
+        {\scriptsize % Smaller text to fit more content
+        \begin{itemize}
+            \item  Daylight vs no daylight. When is an incident more likely to occur?
+        \end{itemize}
+        }
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Temporal Analysis Page 5 %%%%%%
+
+\begin{frame}
+    \frametitle{Temporal Analysis}
+    % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
+        \begin{figure}
+            \flushleft
+            \includegraphics[width=1\linewidth]{Figures/Incidents Per Season (All 2023 Dataset).png}
+        \end{figure}
+        {\scriptsize % Smaller text to fit more content
+        \begin{itemize}
+            \item  Crime-report distribution based on seasons.
+        \end{itemize}
+        }
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Temporal Analysis Page 6 %%%%%%
+
+\begin{frame}
+    \frametitle{Temporal Analysis}
+    % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
+        \begin{figure}
+            \flushleft
+            \includegraphics[width=1\linewidth]{Figures/Incident Counts by Semester in 2023.png}
+        \end{figure}
+        {\scriptsize % Smaller text to fit more content
+        \begin{itemize}
+            \item Tallahassee is a college town. (FSU \& FAMU \& TCC)
+            \item Do students affect the number of crime reports?
+        \end{itemize}
+        }
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% TEMPORAL ANALYSIS END%%%%%%%%%%%%%%%%%%
+
+
 
 \section{Crime Heatmap Generation}
 
