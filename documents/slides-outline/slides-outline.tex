@@ -1,5 +1,5 @@
 \documentclass{beamer}
-
+\usepackage{tikz}
 
 \title{Tallahassee Crime Map}
 \author{Munawar Ali, Çağatay Ayhan, Ece Karaçam, Abdullah Malik, and Mao Nishino}
@@ -21,15 +21,68 @@
 %% add the location bar-chart
 
 \section{Introduction}
-\begin{frame}
-    \frametitle{Introduction}
-    Write two goals of the project: 1) to create a crime map of Tallahassee, and 2) to analyze the crime data using traditional machine learning techniques.
+\begin{frame}{Project At A Glance}
+
+    % Use columns to separate the text from the images
+    \begin{columns}[T] % The [T] alignment option aligns the columns content at the top
+
+        \begin{column}{.5\textwidth}
+            \textbf{Goal:} Develop a generative AI that outputs a crime distribution given a geographical map.\\
+            \quad \\
+            \textbf{Why:} To provide a tool for city planners to see potential crime risks with their plans.\\
+            \quad \\
+            \textbf{Technology:} Generative Adversarial Network (pix2pix)
+        \end{column}
+
+        \begin{column}{.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth]{Figures/Intro Figure.png} % Replace with the path to your map image
+                \caption{Geographical Map to Crime Map}
+            \end{figure}
+        \end{column}
+
+    \end{columns}
+
 \end{frame}
 
 \section{Data Collection and Processing}
 \begin{frame}
     \frametitle{TOPS Data Collection}
-    Write a brief description about how we collected the data from TOPS
+    \begin{columns}[T] % align columns
+        \begin{column}{.48\textwidth}
+            % Image block
+            \begin{figure}
+                \includegraphics[width=\linewidth]{Figures/TOPS.png} % replace with your image path
+                % Set a label for the image to refer to it later
+                \label{fig:tops}
+                \caption{Tallahasse Police Statistics Homepage}
+            \end{figure}
+        \end{column}%
+
+        \begin{column}{.48\textwidth}
+            \begin{tikzpicture}
+                \node[rectangle, draw=black, thick, minimum width=5cm, minimum height=3cm, text centered] (table) {A tabular data};
+            \end{tikzpicture}
+            The table contains the following columns:
+            \begin{itemize}
+                \item Time of the crime report
+                \item Crime type
+                \item Location
+                \item Geographical coordinates
+            \end{itemize}
+        \end{column}%
+    \end{columns}
+
+    % Draw an arrow from the image to the table using TikZ
+    \begin{tikzpicture}[overlay, remember picture]
+        % Define the starting point of the arrow at the bottom of the image
+        \coordinate (image) at ([xshift=3cm]current page.west);
+        % Define the ending point of the arrow at the top of the table
+        \coordinate (table) at ([xshift=-5cm, yshift=2cm]current page.east);
+
+        % Draw the arrow
+        \draw[->, draw=blue, line width=0.5cm, in=180] (image) to (table);
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}
@@ -50,12 +103,12 @@
     \end{minipage}\hfill
     \begin{minipage}[c]{0.3\textwidth}
         {\scriptsize % Smaller text to fit more content
-        \begin{itemize}
-            \item The values on the $x$-axis correspond to the log of the actual count for visual purposes.
-            \item On the $y$-axis all different types of crime reports are listed.
-            \item There are 67 types of reports.
-            \item We will filter out some from our analysis. For example, community policing occurs most often and it is not of interest for our purposes.
-        \end{itemize}
+            \begin{itemize}
+                \item The values on the $x$-axis correspond to the log of the actual count for visual purposes.
+                \item On the $y$-axis all different types of crime reports are listed.
+                \item There are 67 types of reports.
+                \item We will filter out some from our analysis. For example, community policing occurs most often and it is not of interest for our purposes.
+            \end{itemize}
         }
     \end{minipage}
 \end{frame}
@@ -84,10 +137,10 @@
     \end{minipage}\hfill
     \begin{minipage}[c]{0.3\textwidth}
         {\scriptsize % Smaller text to fit more content
-        \begin{itemize}
-            \item Average \# of reported crimes per month is $7311$.
-            \item Data includes all of 2023 and the first month of 2024.
-        \end{itemize}
+            \begin{itemize}
+                \item Average \# of reported crimes per month is $7311$.
+                \item Data includes all of 2023 and the first month of 2024.
+            \end{itemize}
         }
     \end{minipage}
 
@@ -106,10 +159,10 @@
     \end{minipage}\hfill
     \begin{minipage}[c]{0.3\textwidth}
         {\scriptsize % Smaller text to fit more content
-        \begin{itemize}
-            \item Hourly analysis of the data reveals a fluctuating trend with peak hours.
-            \item Data includes all of 2023.
-        \end{itemize}
+            \begin{itemize}
+                \item Hourly analysis of the data reveals a fluctuating trend with peak hours.
+                \item Data includes all of 2023.
+            \end{itemize}
         }
     \end{minipage}
 
@@ -120,17 +173,17 @@
 \begin{frame}
     \frametitle{Temporal Analysis}
     % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
-        \begin{figure}
-            \flushleft
-            \includegraphics[width=1\linewidth]{Figures/OccurencesPerSeason.001.jpeg}
-        \end{figure}
-        {\scriptsize % Smaller text to fit more content
-        \begin{itemize}
-            \item  Hourly crime distribution using portions of the data.
-            \item  Same trend across different seasons of the year 2023.
-        \end{itemize}
-        }
-    
+    \begin{figure}
+        \flushleft
+        \includegraphics[width=1\linewidth]{Figures/OccurencesPerSeason.001.jpeg}
+    \end{figure}
+    {\scriptsize % Smaller text to fit more content
+    \begin{itemize}
+        \item  Hourly crime distribution using portions of the data.
+        \item  Same trend across different seasons of the year 2023.
+    \end{itemize}
+    }
+
 
 \end{frame}
 
@@ -139,15 +192,15 @@
 \begin{frame}
     \frametitle{Temporal Analysis}
     % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
-        \begin{figure}
-            \flushleft
-            \includegraphics[width=1\linewidth]{Figures/Daylight_and_Night.png}
-        \end{figure}
-        {\scriptsize % Smaller text to fit more content
-        \begin{itemize}
-            \item  Daylight vs no daylight. When is an incident more likely to occur?
-        \end{itemize}
-        }
+    \begin{figure}
+        \flushleft
+        \includegraphics[width=1\linewidth]{Figures/Daylight_and_Night.png}
+    \end{figure}
+    {\scriptsize % Smaller text to fit more content
+    \begin{itemize}
+        \item  Daylight vs no daylight. When is an incident more likely to occur?
+    \end{itemize}
+    }
 \end{frame}
 
 
@@ -158,15 +211,15 @@
 \begin{frame}
     \frametitle{Temporal Analysis}
     % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
-        \begin{figure}
-            \flushleft
-            \includegraphics[width=1\linewidth]{Figures/Incidents Per Season (All 2023 Dataset).png}
-        \end{figure}
-        {\scriptsize % Smaller text to fit more content
-        \begin{itemize}
-            \item  Crime-report distribution based on seasons.
-        \end{itemize}
-        }
+    \begin{figure}
+        \flushleft
+        \includegraphics[width=1\linewidth]{Figures/Incidents Per Season (All 2023 Dataset).png}
+    \end{figure}
+    {\scriptsize % Smaller text to fit more content
+    \begin{itemize}
+        \item  Crime-report distribution based on seasons.
+    \end{itemize}
+    }
 \end{frame}
 
 
@@ -175,16 +228,16 @@
 \begin{frame}
     \frametitle{Temporal Analysis}
     % Put figures about temporal trends in crime data (per semester, per month, per day, per hour, etc.)
-        \begin{figure}
-            \flushleft
-            \includegraphics[width=1\linewidth]{Figures/Incident Counts by Semester in 2023.png}
-        \end{figure}
-        {\scriptsize % Smaller text to fit more content
-        \begin{itemize}
-            \item Tallahassee is a college town. (FSU \& FAMU \& TCC)
-            \item Do students affect the number of crime reports?
-        \end{itemize}
-        }
+    \begin{figure}
+        \flushleft
+        \includegraphics[width=1\linewidth]{Figures/Incident Counts by Semester in 2023.png}
+    \end{figure}
+    {\scriptsize % Smaller text to fit more content
+    \begin{itemize}
+        \item Tallahassee is a college town. (FSU \& FAMU \& TCC)
+        \item Do students affect the number of crime reports?
+    \end{itemize}
+    }
 \end{frame}
 
 
