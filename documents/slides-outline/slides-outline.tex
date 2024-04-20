@@ -37,7 +37,7 @@
         \begin{column}{.5\textwidth}
             \begin{figure}
                 \includegraphics[width=\textwidth]{Figures/Intro Figure.png} % Replace with the path to your map image
-                \caption{Geographical Map to Crime Map}
+                \caption{Geographical Map to Crime Map(Adapted from He, Zheng 2021)}
             \end{figure}
         \end{column}
 
@@ -252,21 +252,41 @@
     Brief explanation of GAN and pix2pix
 \end{frame}
 
-\begin{frame}
-    \frametitle{Results}
-    Put the results of the pix2pix model, i.e., the generated heatmap and accuracy
-\end{frame}
+\begin{frame}{Results} % Add your frame title here
 
-\begin{frame}
-    \frametitle{Improving the city via generated heatmap}
-    Edit a geographical map and reduce the crime rate predicted by the model
-    Explain how it can be used by city planners
+    % Wide block at the top
+    \begin{figure}
+        \includegraphics[width=0.8\linewidth]{Figures/Generated heats.png} % Replace with the path to your image
+        \caption{Generated heatmaps. We observe that the spatial pattern is somewhat similar to the real data.}
+    \end{figure}
+
+    \begin{table}[]
+        \begin{tabular}{|l|l|l|}
+            \hline
+                        & Baseline (Random Points) & pix2pix            \\ \hline
+            Average MSE & 3.9543179869651794       & 0.9491354823112488 \\ \hline
+        \end{tabular}
+    \end{table}
 \end{frame}
 
 \section{Conclusion}
 \begin{frame}
     \frametitle{Conclusion}
-    Summarize the results and a bit of future work (like a web app for the model)
+    \begin{itemize}
+        \item The data shows interesting trends in both spatial and temporal dimensions.
+        \item In particular, the absense of students during the summer months is reflected in the crime reports.
+        \item Using pix2pix, we were able to generate heatmaps that resemble the real data.
+        \item In future, we can do:
+        \item \quad Better training of the model
+        \item \quad Implement a user-friendly editor for georaphical maps for hypothetical maps
+        \item \quad Implement a web-app for the tool
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Thank You}
+    \centering
+    \Huge Thank You!
 \end{frame}
 
 \end{document}
