@@ -1,2 +1,0 @@
-================ Training Loss (Sat Apr 20 02:57:25 2024) ================
-(epoch: 1, iters: 100, time: 1.077, data: 0.624) G_GAN: 1.053 G_L1: 7.276 D_real: 0.657 D_fake: 1.174 
