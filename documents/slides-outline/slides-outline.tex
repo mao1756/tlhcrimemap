@@ -248,8 +248,30 @@
 \section{Crime Heatmap Generation}
 
 \begin{frame}
-    \frametitle{pix2pix}
-    Brief explanation of GAN and pix2pix
+    \frametitle{What is Generative Adversarial Network-GAN?}
+    \begin{figure}
+        \centering
+        \includegraphics[width=10cm]{Figures/GAN.png}
+        \caption{GAN}
+        \label{gan}
+    \end{figure}
+    In the training, $G$ and $D$ try to beat each other (hence the word “adversarial”).\\
+    The training stops when $D$ can no longer discriminate fake samples.
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Conditional GAN (Pix2pix)}
+    What do we do if we want a G network that takes a geographical map and outputs a crime map?
+    \begin{figure}
+        \centering
+        \includegraphics[width=11cm]{Figures/conditionalgan.png}
+        \caption{pix2pix}
+        \label{pix2pix}
+    \end{figure}
+
+    After training, a crime map generator is born.
 \end{frame}
 
 \begin{frame}{Results} % Add your frame title here
