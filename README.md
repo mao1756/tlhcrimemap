@@ -1,6 +1,9 @@
+![tally crime map logo](https://github.com/mao1756/tlhcrimemap/assets/56581117/2c6fe833-e1bc-4503-8e75-207704dddff5)
+
 # Tallahassee Crime Map
 
-This project aims to analyze crime information in Tallahasse, FL, collected from [TOPS](https://www.talgov.com/gis/tops/).
+This project aims
+ to analyze crime information in Tallahasse, FL, collected from [TOPS](https://www.talgov.com/gis/tops/).
 
 ## Project Overview
 
