@@ -14,12 +14,12 @@
 \maketitle
 
 \begin{abstract}
-    This document details the development of a generative AI tool designed to predict crime distribution over geographic maps, aiding city planners in assessing potential crime risks. The approach uses a Generative Adversarial Network (GAN), specifically the pix2pix model, to generate crime heatmaps based on geographic input data.
+    This document details the development of a generative AI tool designed to predict crime distribution over geographic maps, aiding city planners in assessing potential crime rates of proposed urban areas. The approach uses a Generative Adversarial Network (GAN), specifically the pix2pix model, to generate crime heatmaps based on geographic input data.
 \end{abstract}
 
 \section{Introduction}
 
-In this project, we aim to analyze geographical crime data in Tallahassee, FL, collected from Tallahassee Police Statistics. Specifically, we will conduct statistical and spatial analyses to identify crime patterns and trends. A key feature of our approach is the utilization of the pix2pix generative model, which allows for the prediction of crime heat maps from both existing and hypothetical geographical maps. This enables urban planners to input their future planning designs into our model to identify potential crime hotspots in advance.
+In this project, we aim to analyze geographical crime data in Tallahassee, FL, collected from Tallahassee Police Statistics (TOPS). Specifically, we will conduct statistical and spatial analyses to identify crime patterns and trends. A key feature of our approach is the utilization of the pix2pix generative model, which allows for the prediction of crime heat maps from both existing and hypothetical geographical maps. This enables urban planners to input their future planning designs into our model to identify potential crime hotspots in advance.
 
 \begin{figure}[!htbp]
     \centering
@@ -44,7 +44,7 @@ Producing the geographical and the crime heatmap involved using the OSMNx librar
 
 \subsection{Categorical Analysis}
 
-A categorical analysis was conducted to identify the frequency of different types of crime reports. The data was visualized using a bar chart that represents each type of crime report in Figure \ref{fig:crime-report}. We observe that many reports are categorized as Community Policing, which is not the direct crime report. To avoid misinterpretation, we will exclude these reports from the analysis.
+A categorical analysis was conducted to identify the frequency of different types of crime reports. The data was visualized using a bar chart that represents each type of crime report in Figure \ref{fig:crime-report}. We observe that many reports are categorized as Community Policing, which is directly related to ordinary conception of crime. To ensure that this datatype does not skew our results, we will exclude such particular reports from the analysis.
 
 \begin{figure}[!htbp]
     \centering
