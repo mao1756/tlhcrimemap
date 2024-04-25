@@ -11,6 +11,21 @@ This project contains two parts:
 - Traditional data analysis on TOPS data using Geopandas and Scikit-learn
 - Crime heatmap prediction given a geographical map, following [He, Zheng (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0952197621003080)
 
+## Getting Started
+First, clone this repository:
+
+```
+git clone git@github.com:mao1756/tlhcrimemap.git
+```
+
+Then, you can install the required packages as follows:
+
+```
+`pip install -r requirements.txt`
+```
+
+It is assumed that you use Python 3.9 to run the script. (I believe this does not matter except for the data collection from ArcGIS - see details in the data collection script)
+
 ## Results
 
 Please first see the [project slides](https://github.com/mao1756/tlhcrimemap/blob/main/documents/slides-outline/slides-outline.pdf) for the project summary.
