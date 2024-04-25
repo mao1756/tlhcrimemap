@@ -91,20 +91,20 @@
 \begin{frame}[t]
     \frametitle{Data Processing}
     \begin{center}
-    \begin{tikzpicture}
-    \node[anchor=south west,inner sep=0] (images) at (0,0) {
-        \includegraphics<1>[width=0.5\textwidth]{Figures/tallahassee_map.png}
-        \includegraphics<2->[width=0.5\textwidth]{Figures/tallahassee_map_heat.png}
-    };
-    \visible<3>{\begin{scope}[x={(images.south east)},y={(images.north west)}]\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);}
-    \end{scope}
-    \end{tikzpicture}
+        \begin{tikzpicture}
+            \node[anchor=south west,inner sep=0] (images) at (0,0) {
+                \includegraphics<1>[width=0.5\textwidth]{Figures/tallahassee_map.png}
+                \includegraphics<2->[width=0.5\textwidth]{Figures/tallahassee_map_heat.png}
+            };
+            \visible<3>{\begin{scope}[x={(images.south east)},y={(images.north west)}]\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);}
+            \end{scope}
+        \end{tikzpicture}
     \end{center}
 
     \begin{overlayarea}{\textwidth}{1cm}
-    \begin{center}
-    \only<1>{Create Tallahassee map using OSMNx with water (blue), parks (green), roads (gray) and buildings (black)}\only<2>{Superimpose crime data the map, with degrees of red dot indicating frequency of crime}\only<3>{Break map into $n$ pieces by computing coordinate centers and specifying dimensions of bounding box}
-    \end{center}
+        \begin{center}
+            \only<1>{Create Tallahassee map using OSMNx with water (blue), parks (green), roads (gray) and buildings (black)}\only<2>{Superimpose crime data the map, with degrees of red dot indicating frequency of crime}\only<3>{Break map into $n$ pieces by computing coordinate centers and specifying dimensions of bounding box}
+        \end{center}
     \end{overlayarea}
 
 \end{frame}
@@ -329,7 +329,7 @@
         \item Using pix2pix, we were able to generate heatmaps that resemble the real data.
         \item In future, we can do:
         \item \quad Better training of the model
-        \item \quad Implement a user-friendly editor for georaphical maps for hypothetical maps
+        \item \quad Implement a user-friendly editor for geographical maps for hypothetical maps
         \item \quad Implement a web-app for the tool
     \end{itemize}
 \end{frame}
@@ -340,4 +340,4 @@
     \Huge Thank You!
 \end{frame}
 
-\end{document} 
+\end{document}
