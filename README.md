@@ -1,4 +1,4 @@
-![tally crime map logo](https://github.com/mao1756/tlhcrimemap/assets/56581117/2c6fe833-e1bc-4503-8e75-207704dddff5)
+![tlhcrimemap](https://github.com/mao1756/tlhcrimemap/assets/56581117/7199d8cf-aa23-4036-8e73-88b1101738a9)
 
 # Tallahassee Crime Map
 
