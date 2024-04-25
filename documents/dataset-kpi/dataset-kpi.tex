@@ -13,12 +13,13 @@
 \maketitle
 
 \section{Project Summary}
-In this project, we aim to analyze geographical crime data in Tallahassee, FL, collected from Tallahassee Police Statistics. Specifically, we will conduct statistical and spatial analyses to identify crime patterns and trends. A key feature of our approach is the utilization of the pix2pix generative model, which allows for the prediction of crime heat maps from both existing and hypothetical geographical maps. This enables urban planners to input their future planning designs into our model to identify potential crime hotspots in advance. Additionally, we plan to develop a web application to visualize the data, providing accessible insights to the public.
+In this project, we aim to analyze geographical crime data in Tallahassee, FL, collected from Tallahassee Police Statistics (TOPS). To clean up the data, we will conduct statistical and spatial analyses to identify crime patterns and trends. A key feature of our approach is the utilization of the pix2pix generative model, which allows for the prediction of crime heat maps from both existing and hypothetical geographical maps from this cleaned data. This enables urban planners to input their future planning designs into our model to identify potential crime hotspots in advance. Additionally, we plan to develop a web application to visualize the data, providing accessible insights to the public.
+
 \section{Objectives}
 \begin{itemize}
-    \item Analyze crime data to identify patterns and trends
-    \item Create a heatmap of crime in Tallahassee using \verb|pix2pix|
-    \item Develop a web application to visualize the data
+    \item We aim to analyze crime data to identify patterns and trends around neighborhoods.
+    \item Create a heatmap of crime in Tallahassee using \verb|pix2pix| from a given geographical layout.
+    \item Ultimately, we hope to develop a web application to visualize the data to help urban planners in designing their layouts.
 \end{itemize}
 
 \section{Dataset}
@@ -29,22 +30,24 @@ The dataset is collected from Tallahassee Police Statistics, which includes geog
     \item Report number
     \item The type of the report
     \item The geographical coordinates of the crime
+    \item Location name of the crime, if given.
 \end{itemize}
 
 \section{Stakeholders}
+The following are the stakeholders of the project:
 \begin{itemize}
     \item Tallahassee Police Department
     \item Tallahassee residents
     \item Local businesses
+    \item Urban planners
 \end{itemize}
 
 
 \section{KPIs}
+We can quantify the success of our project based on the following metrics:
 \begin{itemize}
-    \item Crime rate by location as predicted by the heatmap
-    \item Accuracy of the heatmap
+    \item Crime rate by location as predicted by the heatmap.
+    \item Accuracy of the heatmap.
 \end{itemize}
-
-%\textcolor{blue}{Comments: I think we should remove the last two bullets since a KPI has to be quantifiable and measurable. If there is a specific metric we can use for UX, we can replace that with bullet 3 above, but I'm not sure if there is a single metric or a collection of metrics we can use to quantify bullet 4 above. -- Abdullah}
 
 \end{document}
