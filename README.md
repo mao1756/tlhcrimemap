@@ -21,7 +21,7 @@ git clone git@github.com:mao1756/tlhcrimemap.git
 Then, you can install the required packages as follows:
 
 ```
-`pip install -r requirements.txt`
+pip install -r requirements.txt
 ```
 
 It is assumed that you use Python 3.9 to run the script. (I believe this does not matter except for the data collection from ArcGIS - see details in the data collection script)
